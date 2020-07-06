@@ -13,10 +13,10 @@ const PORT = 8080
 
 app.post("/hook", (req, res) => {
 
-  var name = req.params.name;
-  var email = req.params.email;
-  var message = req.params.message;
-  var id = req.params.id;
+  var name = req.query['name'];
+  var email = req.query['email'];
+  var message = req.query['message'];
+  var id = req.query['id'];
 
 console.log('name:',name,'email:',email,'message:',message,'id:',id);
 
