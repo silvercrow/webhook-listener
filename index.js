@@ -7,14 +7,14 @@ const bodyParser = require("body-parser")
 const app = express()
 const PORT = 8080
 
-app.use(bodyParser.urlencoded({ extended:  false }));
+app.use(bodyParser.urlencoded({ extended:  true }));
 app.use(bodyParser.json());
 
 
 
 
 app.post("/hook", (req, res) => {
- 
+  console.log('req:',req);
   console.log('body:',req.body);
   console.log('stringigy:',JSON.stringify(req.body))
   console.log('parse body:',JSON.parse(req.body))
