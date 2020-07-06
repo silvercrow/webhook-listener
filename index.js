@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 
 
 app.post("/hook", (req, res) => {
-  console.log('req:',req);
-  console.log('body:',req.body);
-  console.log('stringigy:',JSON.stringify(req.body))
-  console.log('parse body:',JSON.parse(req.body))
+  console.log('req:',req.query);
+  //console.log('body:',req.body);
+  //console.log('stringigy:',JSON.stringify(req.body))
+  //console.log('parse body:',JSON.parse(req.body))
  /*
   var name = req.body.name;
   var email = req.body.email;
