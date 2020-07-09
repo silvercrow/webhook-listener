@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 
 app.post("/hook", (req, res) => {
 
+console.log(req.body);
+
   var name = req.query.name;
   var email = req.query.email;
   var message = req.query.message;
