@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 
 app.post("/hook", (req, res) => {
 
-console.log(req.body);
+console.log('Body:------->',req.body);
 
-  var name = req.query.name;
-  var email = req.query.email;
-  var message = req.query.message;
-  var id = req.query.id;
+  var name = req.body.name;
+  var email = req.body.email;
+  var message = req.body.message;
+  var id = req.body.id;
 
 console.log('name:',name,'email:',email,'message:',message,'id:',id);
 
