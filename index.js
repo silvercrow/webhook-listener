@@ -17,6 +17,10 @@ app.post("/hook", (req, res) => {
 
 console.log('Body:------->',req.body);
 
+var key = Object.keys(req.body)[0];
+
+console.log('Key:------->',key);
+
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
