@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 
 
 app.post("/hook", (req, res) => {
-[name,email,message,id] = JSON.parse(Object.keys(req.body)[0]);
+ var data = JSON.parse(Object.keys(req.body)[0]);
+ [name,email,message,id] = data;
 console.log('name:',name,'email:',email,'message:',message,'id:',id);
 
 //console.log(JSON.stringify(req.body))
